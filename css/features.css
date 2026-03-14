@@ -1,0 +1,321 @@
+/* =============================================================
+   PRELOADER
+============================================================= */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background-color: #000100;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader__name {
+  font-family: "Nexa-Regular", sans-serif;
+  font-size: 12px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  animation: pulseName 1.8s ease infinite;
+}
+
+.preloader__bar {
+  width: 160px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.preloader__bar-fill {
+  height: 100%;
+  width: 0;
+  background: #297cde;
+  animation: loadFill 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes loadFill { to { width: 100%; } }
+@keyframes pulseName { 0%, 100% { opacity: 0.85; } 50% { opacity: 0.25; } }
+
+
+.lang-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 5px;
+  min-width: 130px;
+  border: 0.5px solid var(--color-white);
+  border-radius: 5px;
+  background-color: var(--color-black);
+  display: none;
+  z-index: 100;
+}
+
+.lang-menu.show {
+  display: block;
+}
+
+.lang-menu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 8px;
+  white-space: nowrap;
+}
+
+.lang-menu li:hover {
+  background: var(--color-blue);
+}
+
+.flag-lang {
+  width: 22px;
+  height: 16px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #297cde;
+  z-index: 10000;
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
+/* =============================================================
+   STICKY HEADER
+============================================================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  transition: background-color 0.4s, backdrop-filter 0.4s, box-shadow 0.4s, transform 0.4s, padding 0.4s;
+}
+
+.header.scrolled {
+  background: rgba(0, 1, 0, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.header.hide {
+  transform: translateY(-100%);
+}
+
+[data-theme="light"] .header.scrolled {
+  background: rgba(245, 245, 245, 0.88);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* =============================================================
+   SCROLL ANIMATIONS
+============================================================= */
+.will-animate {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.will-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.will-animate[data-delay="1"] { transition-delay: 0.1s; }
+.will-animate[data-delay="2"] { transition-delay: 0.2s; }
+.will-animate[data-delay="3"] { transition-delay: 0.3s; }
+.will-animate[data-delay="4"] { transition-delay: 0.4s; }
+
+
+
+/* =============================================================
+   LIGHTBOX
+============================================================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 1, 0, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 8000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  cursor: zoom-out;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 6px;
+  transform: scale(0.93);
+  transition: transform 0.35s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.lightbox.active .lightbox__img {
+  transform: scale(1);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.lightbox__close:hover {
+  border-color: #297cde;
+  color: #297cde;
+}
+
+/* =============================================================
+   DARK / LIGHT MODE
+============================================================= */
+[data-theme="light"] {
+  --color-black: #f5f5f5;
+  --color-white: #111111;
+  --color-blue: #1565c0;
+}
+
+[data-theme="light"] .lang-menu {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .header__hat {
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+/* SVG icons in light mode — navigation arrows become blue */
+[data-theme="light"] .arrow-link,
+[data-theme="light"] .arrow-link-rotate {
+  color: var(--color-blue);
+}
+
+[data-theme="light"] .footer__link {
+  color: var(--color-blue);
+}
+
+[data-theme="light"] .footer__link:hover {
+  color: var(--color-white);
+}
+
+/* Social icons in light mode — use filter since SVG sprite may use hardcoded fills */
+[data-theme="light"] .socials-link svg {
+  filter: brightness(0) saturate(100%) invert(26%) sepia(90%) saturate(600%) hue-rotate(198deg) brightness(105%);
+}
+
+[data-theme="light"] .header__burger span {
+  background: var(--color-white);
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 0.5px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.theme-toggle:hover {
+  border-color: #297cde;
+  transform: scale(1.1);
+}
+
+[data-theme="light"] .theme-toggle {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* =============================================================
+   TOAST NOTIFICATION
+============================================================= */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: #297cde;
+  color: #ffffff;
+  padding: 11px 22px;
+  border-radius: 4px;
+  font-family: "Nexa-Regular", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  z-index: 9500;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================================================
+   MAGNETIC BUTTON - smooth transition override
+============================================================= */
+.main-section__button {
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), color 0.3s, border-color 0.3s;
+}
+
+/* =============================================================
+   MEDIA — hide some effects on mobile
+============================================================= */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .lightbox__img {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+}

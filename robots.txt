@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bohdan1206.github.io/My-Portfolio/Graphic-Designer-CV/sitemap.xml

@@ -4,8 +4,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ResumeIvanna</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <meta name="description"
+    content="About Ivanna Voitseshko — a graphic designer with experience in digital and print, specialized in social media visuals, branding, and commercial designs." />
+  <meta name="keywords" content="Ivanna Voitseshko, graphic designer, about, resume, branding, UI/UX, print design" />
+  <meta name="author" content="Ivanna Voitseshko" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bohdan1206.github.io/My-Portfolio/Graphic-Designer-CV/about/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bohdan1206.github.io/My-Portfolio/Graphic-Designer-CV/about/" />
+  <meta property="og:title" content="About Ivanna Voitseshko — Graphic Designer" />
+  <meta property="og:description"
+    content="Learn more about Ivanna Voitseshko, her achievements, and her creative process in graphic and web design." />
+  <meta property="og:image"
+    content="https://bohdan1206.github.io/My-Portfolio/Graphic-Designer-CV/images/works-section/video-block-img.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://bohdan1206.github.io/My-Portfolio/Graphic-Designer-CV/about/" />
+  <meta property="twitter:title" content="About Ivanna Voitseshko — Graphic Designer" />
+  <meta property="twitter:description"
+    content="Learn more about Ivanna Voitseshko, her achievements, and her creative process in graphic and web design." />
+  <meta property="twitter:image"
+    content="https://bohdan1206.github.io/My-Portfolio/Graphic-Designer-CV/images/works-section/video-block-img.png" />
+  <title>About Ivanna Voitseshko — Graphic Designer Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/features.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="theme-color" content="#000100" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
 </head>
 
 <body>
@@ -13,20 +38,27 @@
     <div class="container">
       <div class="header__menu">
         <div class="header__home">
-          <a data-en="HOME" data-ua="ГОЛОВНА" class="link header__link" href="./index.html">HOME</a>
+          <a class="link header__link" href="../">
+            <span>IVANNA VOITSESHKO</span>
+          </a>
         </div>
-        <ul class="header__hat">
+        <button class="header__burger" id="burger-btn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="header__hat" id="header-hat">
           <li class="header__langswitcher">
             <button class="header__lang-btn lang-btn button" id="lang-btn">
               EN&#9660;
             </button>
             <ul class="lang-menu" id="lang-menu">
-              <li data-lang="en">English<img class="flag-lang" src="./logo/gb.svg" alt="EN"></li>
-              <li data-lang="ua">Українська<img class="flag-lang" src="./logo/ua.svg" alt="UA"></li>
+              <li data-lang="en">English<img class="flag-lang" src="../logo/gb.svg" alt="EN"></li>
+              <li data-lang="ua">Українська<img class="flag-lang" src="../logo/ua.svg" alt="UA"></li>
             </ul>
           </li>
           <li>
-            <a data-en="WORK" data-ua="ПОРТФОЛІО" class="link header__link" href="./index.html#work-section">WORK</a>
+            <a data-en="WORK" data-ua="ПОРТФОЛІО" class="link header__link" href="../#work-section">WORK</a>
           </li>
           <li>
             <a data-en="ABOUT" data-ua="ПРО МЕНЕ" class="link header__link" href="#about-section">ABOUT</a>
@@ -41,14 +73,14 @@
         <div class="about-section__container">
           <div class="about-section__content">
             <h2 data-en="About me" data-ua="Про мене" class="about-section__title">About me</h2>
-            <p data-en="I’m a graphic designer with experience in creating both digital and print
+            <p data-en="I'm a graphic designer with experience in creating both digital and print
                 visuals - from advertising banners and Times Square billboards to landing pages, websites, 
                 and branded merchandise. I work with Adobe Photoshop, Illustrator, and
                 Figma, and integrate AI tools like MidJourney and Firefly to generate modern, bold, and creative solutions."
-              data-ua="Я графічна дизайнерка з досвідом у створенні digital та друкованих візуалів, 
+              data-ua="Я — графічна дизайнерка з досвідом у створенні digital та друкованих візуалів, 
                 від рекламних банерів і білбордів на Times Square до лендингів, сайтів та брендованого мерчу. 
                 Працюю з Adobe Photoshop, Illustrator, Figma та використовую AI-інструменти (MidJourney, Firefly), 
-                щоб генерувати сучасні та сміливі візуальні рішення" class="about-section__text">I’m a graphic designer
+                щоб генерувати сучасні та сміливі візуальні рішення" class="about-section__text">I'm a graphic designer
               with experience in creating both digital and print visuals - from advertising banners and Times
               Square billboards to landing pages, websites, and branded merchandise. I work with Adobe Photoshop,
               Illustrator and Figma, and integrate AI tools like MidJourney and Firefly to generate modern, bold and
@@ -69,10 +101,10 @@
             <p data-en="My expertise spans graphic design and web design: I design landing pages and websites, 
             work on redesigns, and create responsive layouts that balance aesthetics and functionality. 
             My goal is to craft designs that are clear, engaging, and support business growth." data-ua="Мій досвід 
-            охоплює як графічний дизайн, так і веб-дизайн: я створюю лендинги та сайти, 
+            охоплює як графічний дизайн, так і веб-дизайн: я створюю лендинги та сайти, 
             працюю над редизайнами та адаптивними інтерфейсами, що поєднують естетику й функціональність. 
             Моє завдання — робити дизайн зрозумілим, привабливим і таким, що допомагає бізнесу рости."
-              class="about-section__text">My expertise spans graphic design and web design: I design landing pages and
+              class="about-section__text">My expertise spans graphic design and web design: I design landing pages and
               websites, work on redesigns, and create responsive layouts that balance aesthetics and functionality.
               My goal is to craft designs that are clear, engaging and support business growth.</p>
           </div>
@@ -104,7 +136,7 @@
               achievements</h3>
             <ul class="about-section__key-list">
               <li data-en="Developed banners for international platforms and billboards in Times Square."
-                data-ua="Розробка банерів для міжнародних платформ і білбордів Times Square."
+                data-ua="Розробка банерів для міжнародних платформ і білбордів у Times Square."
                 class="about-section__key-text">
                 <p>Developed banners for international platforms and billboards in Times Square.</p>
               </li>
@@ -130,30 +162,30 @@
             <ul class="about-section__socials-list">
               <a class="socials-link" href="https://t.me/vanessaVoitz" target="_blank" rel="noopener noreferrer">
                 <svg class="about-section__socials-icon" width="29" height="24">
-                  <use href="./logo/icon.svg#icon-telegram"></use>
+                  <use href="../logo/icon.svg#icon-telegram"></use>
                 </svg>
               </a>
               <a class="socials-link" href="mailto:ivanna.voitseshko@gmail.com">
                 <svg class="about-section__socials-icon" width="29" height="24">
-                  <use href="./logo/icon.svg#icon-email"></use>
+                  <use href="../logo/icon.svg#icon-email"></use>
                 </svg>
               </a>
               <a class="socials-link" href="https://www.behance.net/ivannavoitses" target="_blank"
                 rel="noopener noreferrer">
                 <svg class="about-section__socials-icon" width="29" height="24">
-                  <use href="./logo/icon.svg#icon-behance"></use>
+                  <use href="../logo/icon.svg#icon-behance"></use>
                 </svg>
               </a>
               <a class="socials-link" href="https://www.linkedin.com/in/vanessa-voits/" target="_blank"
                 rel="noopener noreferrer">
                 <svg class="about-section__socials-icon" width="29" height="24">
-                  <use href="./logo/icon.svg#icon-linkedin"></use>
+                  <use href="../logo/icon.svg#icon-linkedin"></use>
                 </svg>
               </a>
               <a class="socials-link" href="https://www.instagram.com/imvanessagd/?igsh=amlrbXQzanA1eDgw"
                 target="_blank" rel="noopener noreferrer">
                 <svg class="about-section__socials-icon" width="29" height="24">
-                  <use href="./logo/icon.svg#icon-instagram"></use>
+                  <use href="../logo/icon.svg#icon-instagram"></use>
                 </svg>
               </a>
             </ul>
@@ -165,20 +197,18 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__about-section">
-        <a href="#header">
-          <a href="#header" class="arrow-link-rotate">
-            <svg width="24" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M20.4184 17L3.58164 17C2.91694 17.0009 2.26556 16.8223 1.7029 16.485C1.14023 16.1476 0.689285 15.6652 0.402257 15.0936C0.0662574 14.4154 -0.0631556 13.6609 0.0287643 12.916C0.120684 12.1711 0.43024 11.4658 0.922156 10.8804L9.34052 1.15777C9.67089 0.794356 10.0793 0.502893 10.5382 0.303137C10.997 0.103381 11.4956 0 12 0C12.5044 0 13.003 0.103381 13.4618 0.303137C13.9207 0.502893 14.3291 0.794356 14.6595 1.15777L23.0778 10.8804C23.5698 11.4658 23.8793 12.1711 23.9712 12.916C24.0632 13.6609 23.9337 14.4154 23.5977 15.0936C23.3107 15.6652 22.8598 16.1476 22.2971 16.485C21.7344 16.8223 21.0831 17.0009 20.4184 17Z"
-                fill="currentColor" />
-            </svg>
-          </a>
+        <a href="#header" class="arrow-link-rotate">
+          <svg width="24" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.4184 17L3.58164 17C2.91694 17.0009 2.26556 16.8223 1.7029 16.485C1.14023 16.1476 0.689285 15.6652 0.402257 15.0936C0.0662574 14.4154 -0.0631556 13.6609 0.0287643 12.916C0.120684 12.1711 0.43024 11.4658 0.922156 10.8804L9.34052 1.15777C9.67089 0.794356 10.0793 0.502893 10.5382 0.303137C10.997 0.103381 11.4956 0 12 0C12.5044 0 13.003 0.103381 13.4618 0.303137C13.9207 0.502893 14.3291 0.794356 14.6595 1.15777L23.0778 10.8804C23.5698 11.4658 23.8793 12.1711 23.9712 12.916C24.0632 13.6609 23.9337 14.4154 23.5977 15.0936C23.3107 15.6652 22.8598 16.1476 22.2971 16.485C21.7344 16.8223 21.0831 17.0009 20.4184 17Z"
+              fill="currentColor" />
+          </svg>
         </a>
       </div>
     </div>
-    </div>
   </footer>
-  <script src="./js/lang-menu.js"></script>
+  <script src="../js/script.js" defer></script>
+  <script src="../js/features.js" defer></script>
 </body>
 
 </html>

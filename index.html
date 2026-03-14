@@ -6,8 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Portfolio of Ivanna Voitseshko — Graphic Designer specializing in branding, logos, and marketing visuals." />
+  <meta name="keywords"
+    content="graphic designer, portfolio, branding, logo design, marketing visuals, Ivanna Voitseshko" />
+  <meta name="author" content="Ivanna Voitseshko" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bohdan1206.github.io/My-Portfolio/Graphic-Designer-CV/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bohdan1206.github.io/My-Portfolio/Graphic-Designer-CV/" />
+  <meta property="og:title" content="Ivanna Voitseshko — Graphic Designer Portfolio" />
+  <meta property="og:description"
+    content="Portfolio of Ivanna Voitseshko — Graphic Designer specializing in branding, logos, and marketing visuals." />
+  <meta property="og:image"
+    content="https://bohdan1206.github.io/My-Portfolio/Graphic-Designer-CV/images/works-section/video-block-img.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://bohdan1206.github.io/My-Portfolio/Graphic-Designer-CV/" />
+  <meta property="twitter:title" content="Ivanna Voitseshko — Graphic Designer Portfolio" />
+  <meta property="twitter:description"
+    content="Portfolio of Ivanna Voitseshko — Graphic Designer specializing in branding, logos, and marketing visuals." />
+  <meta property="twitter:image"
+    content="https://bohdan1206.github.io/My-Portfolio/Graphic-Designer-CV/images/works-section/video-block-img.png" />
   <title>Ivanna Voitseshko — Graphic Designer Portfolio</title>
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/features.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="theme-color" content="#000100" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="icon" type="image/png" href="./images/favicon.png" />
 </head>
 
 <body>
@@ -15,9 +39,16 @@
     <div class="container">
       <div class="header__menu">
         <div class="header__home">
-          <a data-en="HOME" data-ua="ГОЛОВНА" class="link header__link" href="">HOME</a>
+          <a class="link header__link" href="">
+            <span>IVANNA VOITSESHKO</span>
+          </a>
         </div>
-        <ul class="header__hat">
+        <button class="header__burger" id="burger-btn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="header__hat" id="header-hat">
           <li class="header__langswitcher">
             <button class="header__lang-btn lang-btn button" id="lang-btn">
               EN&#9660;
@@ -31,7 +62,7 @@
             <a data-en="WORK" data-ua="ПОРТФОЛІО" class="link header__link" href="#work-section">WORK</a>
           </li>
           <li>
-            <a data-en="ABOUT" data-ua="ПРО МЕНЕ" class="link header__link" href="./about.html">ABOUT</a>
+            <a data-en="ABOUT" data-ua="ПРО МЕНЕ" class="link header__link" href="./about/">ABOUT</a>
           </li>
         </ul>
       </div>
@@ -47,8 +78,8 @@
           <p data-en="I'm a graphic designer working in both digital and print. From
               billboards in Times Square and visuals for social media to branded
               products, landing pages, and websites, I transform ideas into
-              designs that inspire and engage." data-ua="Я графічна дизайнерка, створюю як цифровий контент, 
-              так і поліграфічну продукцію. 
+              designs that inspire and engage." data-ua="Я графічний дизайнер, який працює як у цифровому, 
+              так і в друкованому форматі. 
             Від білбордів на Times Square та візуальних елементів для соціальних мереж до брендованих продуктів, 
             цільових сторінок та вебсайтів, я перетворюю ідеї на дизайни, що надихають та залучають."
             class="main-section__text">
@@ -75,21 +106,25 @@
         <div class="work-section__container">
           <h2 hidden data-en="MY WORKS" data-ua="МОЇ РОБОТИ" class="work-section__title">MY WORKS</h2>
           <div class="work-section__blocks">
-            <a href="./works-video.html" class="work-section__block block1"><img
-                src="./images/works-section/video-block-img.png" alt="Banner for Times Square"></a>
-            <a href="./works-logos.html" class="work-section__block block2"><img
-                src="./images/works-section/logo-block-img.png" alt="Logo and Brand Identify"></a>
-            <a href="./works-banners.html" class="work-section__block block3"><img
-                src="./images/works-section/banner-block-img2.png" alt="Digital Creatives (Web3, i-Gaming)"></a>
-            <a href="./works-illustrations.html" class="work-section__block block4">
+            <a href="./works-video/" class="work-section__block block1" data-category="video">
+              <img src="./images/works-section/video-block-img.png" alt="Banner for Times Square" loading="lazy">
+            </a>
+            <a href="./works-logos/" class="work-section__block block2" data-category="branding">
+              <img src="./images/works-section/logo-block-img.png" alt="Logo and Brand Identity" loading="lazy">
+            </a>
+            <a href="./works-banners/" class="work-section__block block3" data-category="digital">
+              <img src="./images/works-section/banner-block-img2.png" alt="Digital Creatives" loading="lazy">
+            </a>
+            <a href="./works-illustrations/" class="work-section__block block4" data-category="print">
               <img src="./images/works-section/illustrations-image/illustration-block-image.png"
-                alt="Illustrations & Print Design">
+                alt="Illustrations &amp; Print Design" loading="lazy">
             </a>
-            <a href="./works-mobileapp.html" class="work-section__block block5">
-              <img src="./images/works-section/mobileapp-image/mobileapp-section-img.png" alt="Mobile App">
+            <a href="./works-mobileapp/" class="work-section__block block5" data-category="ux">
+              <img src="./images/works-section/mobileapp-image/mobileapp-section-img.png" alt="Mobile App"
+                loading="lazy">
             </a>
-            <a href="./works-website.html" class="work-section__block block6">
-              <img src="./images/works-section/website-image/website-section-img.png" alt="Website">
+            <a href="./works-website/" class="work-section__block block6" data-category="web">
+              <img src="./images/works-section/website-image/website-section-img.png" alt="Website" loading="lazy">
             </a>
           </div>
         </div>
@@ -110,7 +145,8 @@
       </div>
     </footer>
   </main>
-  <script src="./js/lang-menu.js"></script>
+  <script src="./js/script.js" defer></script>
+  <script src="./js/features.js" defer></script>
 </body>
 
 </html>
