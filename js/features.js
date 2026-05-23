@@ -67,9 +67,8 @@
   window.addEventListener("load", function () {
     setTimeout(function () {
       preloader.classList.add("hidden");
-    }, 1500);
+    }, 1000);
   });
-
 
   // ============================================================
   // STICKY HEADER (show/hide on scroll)
@@ -179,16 +178,15 @@
     });
   }
 
-
   // ============================================================
   // SCROLL TO TOP — fix for sticky header + .hide transform
   // ============================================================
   document.querySelectorAll('a[href="#header"]').forEach(function (link) {
-    link.addEventListener('click', function (e) {
+    link.addEventListener("click", function (e) {
       e.preventDefault();
-      var header = document.querySelector('.header');
-      if (header) header.classList.remove('hide');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      var header = document.querySelector(".header");
+      if (header) header.classList.remove("hide");
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   });
 
@@ -201,7 +199,8 @@
     if (!img || !close) return;
 
     const targets = document.querySelectorAll(
-      ".works-video-section img, .logos-section img, .banner-section img, " +
+      ".advertising-section img, .advertising-section2 img, .advertising-section3 img, .advertising-section4 img, " +
+        ".logos-section img, .banner-section img, " +
         ".illustration-section img, .mobileapp-section img, .website-section img",
     );
     if (!targets.length) return;

@@ -215,6 +215,12 @@
   --color-blue: #1565c0;
 }
 
+[data-theme="light"] .advertising-section2,
+[data-theme="light"] .advertising-section4,
+[data-theme="light"] .logos-section__group4 {
+  background-color: #ffffff;
+}
+
 [data-theme="light"] .lang-menu {
   border-color: rgba(0, 0, 0, 0.2);
 }
