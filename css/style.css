@@ -1014,18 +1014,35 @@ address {
 /* =============================================================================
    13. WORKS — MOBILE APP
 ============================================================================= */
+.mobileapp-section__container {}
+
 .mobileapp-section__container p {
   font-size: 20px;
-  margin-block: 36px;
+  /* margin-block: 36px; */
+}
+
+.mobileapp-section__block1 {
+  position: relative;
+}
+
+.mobileapp-section__block1 p {
+  position: absolute;
+  top: 15%;
+  left: 450px;
 }
 
 .mobileapp-section__container img:nth-of-type(2) {
-  position: relative;
-  top: -244px;
+  margin-block: 60px;
 }
 
 .mobileapp-section__container img:nth-of-type(3) {
-  margin-top: -160px;
+  position: relative;
+  margin-top: -300px;
+}
+
+.mobileapp-section__container img:nth-of-type(4) {
+  position: relative;
+  margin-top: 60px;
 }
 
 .mobileapp-section__content {
@@ -1034,28 +1051,30 @@ address {
 
 .mobileapp-section__content img {
   position: relative;
-  top: -90px;
+  margin-top: -90px;
+  margin-bottom: 60px;
 }
 
 .mobileapp-section__content p {
+  position: absolute;
   margin: 0;
 }
 
 .mobileapp-section__content p:nth-of-type(1) {
   position: absolute;
-  top: 0;
+  top: 90px;
   left: 42px;
 }
 
 .mobileapp-section__content p:nth-of-type(2) {
   position: absolute;
-  top: 694px;
+  top: 770px;
   left: 42px;
 }
 
 .mobileapp-section__content p:nth-of-type(3) {
   position: absolute;
-  bottom: 6.5%;
+  bottom: 2%;
   left: 26.5%;
   width: 100%;
   text-align: center;
@@ -1464,39 +1483,79 @@ address {
   }
 
   /* Works — Mobile App */
+  .mobileapp-section__container {
+    padding: 0 20px;
+  }
+
   .mobileapp-section__container p {
     font-size: 16px;
     margin-block: 20px;
     line-height: 1.5;
   }
 
-  .mobileapp-section__container img:nth-of-type(2) {
-    position: static;
-    top: auto;
-  }
-
-  .mobileapp-section__container img:nth-of-type(3) {
-    margin-top: 0;
-  }
-
-  .mobileapp-section__content {
+  .mobileapp-section__block1 {
     position: static;
   }
 
-  .mobileapp-section__content img {
+  .mobileapp-section__block1 p {
     position: static;
-    top: auto;
+    margin-block: 20px;
+  }
+
+  .mobileapp-section__container img:nth-of-type(1) {
     width: 100%;
   }
 
-  .mobileapp-section__content p:nth-of-type(1),
-  .mobileapp-section__content p:nth-of-type(2),
-  .mobileapp-section__content p:nth-of-type(3) {
-    position: static;
-    text-align: left;
-    width: auto;
-    margin-block: 16px;
+  .mobileapp-section__container img:nth-of-type(2) {
+    position: re;
+    top: auto;
+    margin-block: 20px;
+    width: 100%;
   }
+
+  .mobileapp-section__container img:nth-of-type(3) {
+    margin-top: -80px;
+    width: 100%;
+  }
+
+  .mobileapp-section__container img:nth-of-type(4) {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .mobileapp-section__content {
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .mobileapp-section__content img {
+    position: relative;
+    top: auto;
+    width: 100%;
+    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+
+  .mobileapp-section__content p:nth-of-type(1) {
+    position: relative;
+    top: -22px;
+    left: 10px;
+    display: none;
+  }
+
+  .mobileapp-section__content p:nth-of-type(2) {
+    position: relative;
+    top: 160px;
+    left: 10px;
+    display: none;
+  }
+
+  .mobileapp-section__content p:nth-of-type(3) {
+    position: relative;
+    margin-top: -40px;
+    display: none;
+  }
+
 
   /* Works — Website */
   .website-section__container p {
